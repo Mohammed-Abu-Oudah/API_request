@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="KGk-i7-Jjw" customClass="PostCommentsTableViewCell" customModule="UserDataAPI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUh-nE-Mlq" userLabel="ContainerView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commenter Email: medo.doood2211@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lds-3h-455">
+                                <rect key="frame" x="8" y="8" width="304" height="30"/>
+                                <color key="backgroundColor" red="0.46889787910000003" green="0.44193232059999998" blue="0.64921897650000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="TQd-oa-eRN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="nice pic buddy I wanna have one like this when we meet ... mis you alot." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sRG-q1-DMd">
+                                <rect key="frame" x="8" y="43" width="304" height="99"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sRG-q1-DMd" firstAttribute="leading" secondItem="ZUh-nE-Mlq" secondAttribute="leading" constant="8" id="2zE-yH-uPb"/>
+                            <constraint firstAttribute="trailing" secondItem="sRG-q1-DMd" secondAttribute="trailing" constant="8" id="EfI-ev-fVC"/>
+                            <constraint firstAttribute="trailing" secondItem="Lds-3h-455" secondAttribute="trailing" constant="8" id="bka-LX-YNG"/>
+                            <constraint firstAttribute="bottom" secondItem="sRG-q1-DMd" secondAttribute="bottom" constant="8" id="cPT-BQ-dsL"/>
+                            <constraint firstItem="Lds-3h-455" firstAttribute="leading" secondItem="ZUh-nE-Mlq" secondAttribute="leading" constant="8" id="iwa-aH-X4f"/>
+                            <constraint firstItem="Lds-3h-455" firstAttribute="top" secondItem="ZUh-nE-Mlq" secondAttribute="top" constant="8" id="lNi-f5-zvy"/>
+                            <constraint firstItem="sRG-q1-DMd" firstAttribute="top" secondItem="Lds-3h-455" secondAttribute="bottom" constant="5" id="pY8-63-mf4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ZUh-nE-Mlq" secondAttribute="trailing" id="3Lm-rh-WDW"/>
+                    <constraint firstItem="ZUh-nE-Mlq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="GrE-gf-sHE"/>
+                    <constraint firstItem="ZUh-nE-Mlq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="LLY-hY-CUG"/>
+                    <constraint firstAttribute="bottom" secondItem="ZUh-nE-Mlq" secondAttribute="bottom" id="V1p-e2-aRM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="commentText" destination="sRG-q1-DMd" id="ITW-c8-zEY"/>
+                <outlet property="commenterEmailLbl" destination="Lds-3h-455" id="nIV-hx-n8a"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="95.758928571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
